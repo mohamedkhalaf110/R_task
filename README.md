@@ -24,6 +24,10 @@ library("ggplot2")
 
 #give a look at my data
 summary(my_data)
+head(my_data, n = 5)
+
+tail(my_data, n = 5)
+
 
 #First to see relations between features 
 
@@ -53,9 +57,8 @@ draw_sc + geom_point(aes(color=fleet_finish)) + stat_smooth(se=FALSE)
 draw_bar <- ggplot(my_data, aes(x= fleet_finish, fill =fleet_start))
 draw_bar + geom_bar()
 draw_bar + geom_bar() + theme_light()
-draw_bar + geom_bar() + labs(y="Passenger count",
-                             title = "Survival Rate")
-#draw_bar + geom_bar() + facet_wrap( ∼ Pclass)
+draw_bar + geom_bar() + labs(y="count")
+
 
 
 ggplot(data = my_data, aes(x = Time, y =fleet_finish)) +geom_bar(stat = "identity")
