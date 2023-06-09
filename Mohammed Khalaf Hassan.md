@@ -1,4 +1,5 @@
 # R_task
+#name_ محمد خلف حسن محمد
 #read dataset
 my_data=read.csv("G3_sydney_hobart_times.csv")
 
